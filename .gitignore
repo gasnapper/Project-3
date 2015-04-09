@@ -34,7 +34,9 @@ $RECYCLE.BIN/
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-.class
+
+#Unnecessary java files
+*.class
 
 # Directories potentially created on remote AFP share
 .AppleDB

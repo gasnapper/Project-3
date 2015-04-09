@@ -1,4 +1,10 @@
 
-public class MergeSort {
+public class MergeSort implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
