@@ -13,6 +13,9 @@ public class SortDriver {
 		
 		InsertionSort R1= new InsertionSort();
 		R1.begin();
+		
+		MergeSort m = new MergeSort();
+		m.run();
 	}
 	public void ArrayCreate(){
 		
