@@ -3,7 +3,11 @@ public class InsertionSort implements Runnable {
 
 	Thread t;
 	
-	 public static <Integer extends Comparable<Integer>> 
+	 public InsertionSort(Integer[] insertionArray) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static <Integer extends Comparable<Integer>> 
 		void insertionSort(Integer[] data)
 {
   for (int index = 1; index < data.length; index++)

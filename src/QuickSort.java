@@ -1,6 +1,12 @@
 import java.util.Arrays;
-public class QuickSort {
-//-----------------------------------------------------------
+public class QuickSort implements Runnable {
+	Integer[]data;
+public QuickSort(Integer[] quickArray) {
+		// TODO Auto-generated constructor stub
+		data =quickArray;
+	}
+
+	//-----------------------------------------------------------
 	private static <Integer extends Comparable<Integer>>
 			void swap(Integer[] data, int index1, int index2)
 		{
@@ -67,4 +73,10 @@ public class QuickSort {
 //LISTEN HERE
 			return right;
 		}
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	quickSort(data);
+}
 	}//ends BubbleSort.java

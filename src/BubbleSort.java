@@ -1,5 +1,10 @@
 import java.util.Arrays;
-public class BubbleSort {
+public class BubbleSort implements Runnable {
+	Integer[]data;
+public BubbleSort(Integer[] bubbleArray) {
+		// TODO Auto-generated constructor stub
+	data= bubbleArray;
+	}
 
 //-------------------------------------------------
 private static <Integer extends Comparable<Integer>>
@@ -29,4 +34,10 @@ public static < Integer extends Comparable<Integer>>
 	        }
 //LISTEN HERE
     	}
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	bubbleSort(data);
+}
 }
