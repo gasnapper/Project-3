@@ -2,22 +2,21 @@ import java.util.Random;
 
 
 public class SortDriver {
-	
+	//create array of random numbers here
+			//numbers range from 0-10
+			int number;
+			Integer randomArray[];
+			Integer bubbleArray[];
+			Integer quickArray[];
+			Integer radixArray[];
+			Integer mergeArray[];
 	
 	
 	public SortDriver(){
+		arrayLoad();
+	
+	
 		
-	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//create array of random numbers here
-		//numbers range from 0-10
-		int number;
-		Integer randomArray[];
-		Integer bubbleArray[];
-		Integer quickArray[];
-		Integer radixArray[];
-		Integer mergeArray[];
 		
 		
 		Random rand = new Random();
@@ -38,20 +37,29 @@ public class SortDriver {
 			int num = rand.nextInt(10)+1;
 			randomArray[i]=num;
 		}
-	/*	System.out.println(randomArray[2]);
+	
+		MergeSort m = new MergeSort();
+		System.out.println("\n\n");
+		m.mergeSort(randomArray);
+	
+	}
+	public void ArrayCreate(){
+		
+		
+	}
+	public void arrayLoad()
+	{
+		for (int loader = 0; loader < randomArray.length; loader++)
+		{
+			bubbleArray[loader] = randomArray[loader];
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*	System.out.println(randomArray[2]);
 		InsertionSort R1= new InsertionSort();
 		R1.begin();
 	*/
-		MergeSort m = new MergeSort();
-		System.out.println("\n\n");
-		m.MergeSort(array);
-	}
-	public void ArrayCreate(){
-		for (int loader = 0; loader < randomArray.length, loader++)
-		{
-			
-		}
-		
-	}
-	
+}
 }
