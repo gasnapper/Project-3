@@ -29,9 +29,9 @@ public class SortDriver {
 		
 		
 		System.out.println("How many random numbers?: "+number);
-		//System.out.println("How big is array?:"+randomArray.length);
+		System.out.println("How big is array?:"+ a.randomArrayLength());
 
-		System.out.println("Radix");
+	
 		
 		
 

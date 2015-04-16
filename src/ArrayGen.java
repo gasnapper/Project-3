@@ -67,4 +67,8 @@ public class ArrayGen {
 	{
 		return insertionArray;
 	}
+	public int randomArrayLength()
+	{
+		return randomArray.length;
+	}
 }
