@@ -12,9 +12,16 @@ public class SortDriver {
 		ArrayGen a = new ArrayGen(number);
 		InsertionSort R1= new InsertionSort();
 		R1.begin();
+<<<<<<< HEAD
 	   // MergeSort m = new MergeSort(mergeArray);
 		//SortDriver s = new SortDriver();
 		//System.out.println("How many random numbers?: "+number);
 		//System.out.println("How big is array?:"+randomArray.length);
+=======
+		
+		RadixSort R2=new RadixSort();
+		R2.run();
+	*/
+>>>>>>> origin/Group
 }
 }
