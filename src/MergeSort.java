@@ -1,12 +1,16 @@
 public class MergeSort implements Runnable{
-
+	Integer[]data;
+	public MergeSort(Integer[] mergeArray)
+	{
+		data= mergeArray;
+	}
 /**
      * Sorts the specified array of objects using the merge sort
      * algorithm.
      *
      * @param data the array to be sorted
      */
-	public static <Integer extends Comparable<Integer>>
+	public <Integer extends Comparable<Integer>>
 		void mergeSort(Integer[] data)
 	{
 		mergeSort(data, 0, data.length - 1);
@@ -92,9 +96,10 @@ public class MergeSort implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		Integer[]data ={2,4,5,4};
-		mergeSort(data);
 		System.out.println("Started Merge Run Method");
+
+		
+		mergeSort(data);
 	}
 
 
