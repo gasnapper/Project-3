@@ -3,32 +3,43 @@ public class InsertionSort implements Runnable {
 
 	Thread t;
 	
+	 public static <Integer extends Comparable<Integer>> 
+		void insertionSort(Integer[] data)
+{
+  for (int index = 1; index < data.length; index++)
+  {
+      Integer key = data[index];
+      int position = index;
+			
+      // shift larger values to the right 
+      while (position > 0 && data[position-1].compareTo(key) > 0)
+      {
+          data[position] = data[position-1];
+          position--;
+      }
+			
+      data[position] = key;
+      
+  }
+  System.out.print("After \n");
+  for(int z=0;z<data.length;z++)
+			
+		System.out.print( data[z] + " , ");
+		System.out.println();
+}
+	
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-	int i ,j ;
-	int key = 0;
-	int[] data= {0,55,42,2,8,18,98,722};
-for( i=1;i< data.length;i++){
+		Integer[]data ={464,666,96,165,5,2651,999,326};
 		
-		System.out.print(data[i]);
-}
+		 System.out.print("before \n");
+		  for(int z=0;z<data.length;z++)
+					
+				System.out.print( data[z] + " , ");
+				System.out.println();
+		insertionSort(data);
 	
-	for( i=1;i< data.length;i++){
-		
-		
-		key=data[i];
-		j=i;
-		while(j >0 && data[j-1]>key){
-			
-			data[j]=data[j-1];
-			j--;
-		}
-		
-		data[j]=key;
-	}
-	for(i=0;i<data.length;i++)
-	System.out.print("After Sorting" +data[i] + ",");
 	}
 
 	
