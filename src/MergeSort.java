@@ -58,6 +58,7 @@ public class MergeSort implements Runnable{
 			{
 				temp[index] = data[first1];
 				first1++;
+				//System.out.println("tempArray index:"+temp[index]);
 			}
 			else
 			{
@@ -91,7 +92,10 @@ public class MergeSort implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		Integer[]data ={0,1,4,8};
+		Integer[]data ={2,4,5,4};
 		mergeSort(data);
+		System.out.println("Started Merge Run Method");
 	}
+
+
 }
