@@ -10,18 +10,29 @@ public class SortDriver {
 		Window w = new Window();
 		number = w.getNumber();
 		ArrayGen a = new ArrayGen(number);
-		InsertionSort R1= new InsertionSort();
-		R1.begin();
-<<<<<<< HEAD
-	   // MergeSort m = new MergeSort(mergeArray);
-		//SortDriver s = new SortDriver();
-		//System.out.println("How many random numbers?: "+number);
-		//System.out.println("How big is array?:"+randomArray.length);
-=======
 		
-		RadixSort R2=new RadixSort();
-		R2.run();
-	*/
->>>>>>> origin/Group
+		
+		InsertionSort insertThread= new InsertionSort(a.getInsertionArray());
+		MergeSort mergeThread = new MergeSort(a.getMergeArray());
+		RadixSort radixThread=new RadixSort();
+		BubbleSort bubbleThread= new BubbleSort(a.getBubbleArray());
+		QuickSort quickThread = new QuickSort(a.getQuickArray());
+		
+		
+		
+		//insertThread.run();
+	   // mergeThread.run();
+	    //radixThread.run();
+	   // quickThread.run();
+	   // bubbleThread.run();
+		
+		
+		System.out.println("How many random numbers?: "+number);
+		System.out.println("How big is array?:"+ a.randomArrayLength());
+
+	
+		
+		
+
 }
 }

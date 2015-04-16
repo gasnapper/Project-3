@@ -47,4 +47,28 @@ public class ArrayGen {
 			insertionArray[loader] = randomArray[loader];
 		}
 	}
+	public Integer[] getMergeArray()
+	{
+		return mergeArray;
+	}
+	public Integer[] getRadixArray()
+	{
+		return radixArray;
+	}
+	public Integer[] getBubbleArray()
+	{
+		return bubbleArray;
+	}
+	public Integer[] getQuickArray()
+	{
+		return quickArray;
+	}
+	public Integer[] getInsertionArray()
+	{
+		return insertionArray;
+	}
+	public int randomArrayLength()
+	{
+		return randomArray.length;
+	}
 }
