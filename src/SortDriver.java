@@ -60,6 +60,9 @@ public class SortDriver {
 		/*	System.out.println(randomArray[2]);
 		InsertionSort R1= new InsertionSort();
 		R1.begin();
+		
+		RadixSort R2=new RadixSort();
+		R2.run();
 	*/
 }
 }
