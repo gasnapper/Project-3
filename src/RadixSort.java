@@ -73,14 +73,15 @@ public class RadixSort implements Runnable {
 
 		FileWriter fw;
 		try {
-			fw = new FileWriter(f);
+			fw = new FileWriter(f,true);
 			BufferedWriter bw = new BufferedWriter(fw);
 
 			bw.write(output);        // Writing to the file
-			bw.newLine();
+			//bw.newLine();
 			bw.close();                       // Close the BufferedWriter
 
 			fw.close();   // Close the FileWriter
+		
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

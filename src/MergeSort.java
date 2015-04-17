@@ -124,20 +124,21 @@ public class MergeSort implements Runnable{
 	}
 	public void filePrint()
 	{
-		String output = "MergeSort" + getTime();
+		String output = "MergeSort" + getTime()+"\n";
 		
 		File f = new File("src/output.dat");
 
 		FileWriter fw;
 		try {
-			fw = new FileWriter(f);
+			fw = new FileWriter(f,true);
 			BufferedWriter bw = new BufferedWriter(fw);
 
 			bw.write(output);        // Writing to the file
-			bw.newLine();
-			//bw.close();                       // Close the BufferedWriter
+			//bw.newLine();
+			//bw.flush();
+			bw.close();                       // Close the BufferedWriter
 
-			//fw.close();   // Close the FileWriter
+			fw.close();   // Close the FileWriter
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

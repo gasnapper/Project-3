@@ -15,11 +15,10 @@ public class QuickSort implements Runnable {
 	public QuickSort(Integer[] quickArray) {
 		// TODO Auto-generated constructor stub
 		data =quickArray;
-<<<<<<< HEAD
-		t = new Timer(0, null);
-=======
+
+
 		 t = new Timer(0, null);
->>>>>>> origin/Group
+
 	}
 
 	//-----------------------------------------------------------
@@ -99,20 +98,22 @@ public class QuickSort implements Runnable {
 		}
 		public void filePrint() throws FileNotFoundException
 		{
-			String output = "QuickSort" + getTime();
+			String output = "BubbleSort" + getTime();
 			File f = new File("src/output.dat");
-				FileOutputStream fos;
-				try {
-					fos = new FileOutputStream("src/output.dat",true);
-					ObjectOutputStream oos = new ObjectOutputStream(fos);
-					oos.writeObject(output);
-					oos.flush();
-					oos.close();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
+
+			FileWriter fw;
+			try {
+				fw = new FileWriter(f,true);
+				BufferedWriter bw = new BufferedWriter(fw);
+
+				bw.write(output);        // Writing to the file
+				bw.newLine();
+				//bw.flush();                       // Close the BufferedWriter
+				fw.close();   // Close the FileWriter
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 			
 			
@@ -126,15 +127,15 @@ public void run() {
 	t.stop();
 	long elapsedTime=System.nanoTime() - startTime;
 	setTime(elapsedTime);
-<<<<<<< HEAD
+
 	try {
 		filePrint();
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-=======
+
 	//filePrint();
->>>>>>> origin/Group
+
 }
 	}//ends BubbleSort.java

@@ -52,15 +52,17 @@ public class InsertionSort implements Runnable {
 
 		FileWriter fw;
 		try {
-			fw = new FileWriter(f);
+			fw = new FileWriter(f,true);
 			BufferedWriter bw = new BufferedWriter(fw);
-
+			//bw.newLine();
 			bw.write(output);        // Writing to the file
-			bw.newLine();
-			//bw.close();   // Close the BufferedWriter
+			//bw.newLine();
+			//bw.flush();
+			//fw.flush();
+			bw.close();   // Close the BufferedWriter
 			
 
-			//fw.close();   // Close the FileWriter
+			fw.close();   // Close the FileWriter
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
