@@ -5,7 +5,7 @@ import javax.swing.Timer;
 
 
 public class RadixSort implements Runnable {
-<<<<<<< HEAD
+
 		Integer[] Data;
 		Timer t;
 		long passedTime;
@@ -13,16 +13,8 @@ public class RadixSort implements Runnable {
 		// TODO Auto-generated constructor stub
 		 t = new Timer(0, null);
 		 Data=radixArray;
-=======
-	Integer[]data;
-	Timer t;
-	long passedTime;
-	 public RadixSort(Integer[] radixArray) {
-		// TODO Auto-generated constructor stub
-		 
-		 data=radixArray;
->>>>>>> origin/Group
-	}
+	 }
+	
 
 	public void radixsort(Integer[] input) {
 		  final int RADIX = 10;
@@ -66,32 +58,25 @@ public class RadixSort implements Runnable {
 	{
 		return passedTime;
 	}
-<<<<<<< HEAD
+
 	public String filePrint()
 	{
 		String output = "MergeSort" + getTime();
 		return output;
 	}
 
-=======
->>>>>>> origin/Group
+
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		t.start();
 		long startTime= System.nanoTime();
-<<<<<<< HEAD
+
 		radixsort(Data);
-=======
-		radixSort(data);
->>>>>>> origin/Group
 		t.stop();
 		long elapsedTime=System.nanoTime() - startTime;
 		setTime(elapsedTime);
 		
-<<<<<<< HEAD
-=======
-		
->>>>>>> origin/Group
+
 	}
 }
