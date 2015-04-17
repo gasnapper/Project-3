@@ -23,8 +23,13 @@ public class SortDriver {
 		
 		insertThread.run();//works
 	    radixThread.run();//works
+<<<<<<< HEAD
 	    quickThread.run();////////broken
 	    //bubbleThread.run();//////broken
+=======
+	    quickThread.run();////////works
+	   bubbleThread.run();//////works
+>>>>>>> origin/Group
 	    mergeThread.run();//works
 		
 		
@@ -39,7 +44,14 @@ public class SortDriver {
 				+"\n"+Arrays.toString(a.getInsertionArray()));
 		
 		System.out.println("How long did MergeSort take?: "+ mergeThread.getTime());
+<<<<<<< HEAD
 		
+=======
+		System.out.println("How long did RadixSort take?: "+ radixThread.getTime());
+		System.out.println("How long did InsertionSort take?: "+ insertThread.getTime());
+		System.out.println("How long did QuickSort take?: "+  quickThread.getTime());
+		System.out.println("How long did BubbleSort take?: "+ bubbleThread.getTime());
+>>>>>>> origin/Group
 		
 		
 

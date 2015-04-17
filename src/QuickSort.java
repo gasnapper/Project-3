@@ -15,7 +15,11 @@ public class QuickSort implements Runnable {
 	public QuickSort(Integer[] quickArray) {
 		// TODO Auto-generated constructor stub
 		data =quickArray;
+<<<<<<< HEAD
 		t = new Timer(0, null);
+=======
+		 t = new Timer(0, null);
+>>>>>>> origin/Group
 	}
 
 	//-----------------------------------------------------------
@@ -122,11 +126,15 @@ public void run() {
 	t.stop();
 	long elapsedTime=System.nanoTime() - startTime;
 	setTime(elapsedTime);
+<<<<<<< HEAD
 	try {
 		filePrint();
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+=======
+	//filePrint();
+>>>>>>> origin/Group
 }
 	}//ends BubbleSort.java

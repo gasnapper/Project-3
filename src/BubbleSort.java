@@ -12,7 +12,11 @@ public class BubbleSort implements Runnable {
 	public BubbleSort(Integer[] bubbleArray) {
 		// TODO Auto-generated constructor stub
 	data= bubbleArray;
+<<<<<<< HEAD
 	t = new Timer(0, null);
+=======
+	 t = new Timer(0, null);
+>>>>>>> origin/Group
 	}
 
 //-------------------------------------------------

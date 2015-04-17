@@ -13,17 +13,17 @@ public class ArrayGen {
 	Integer mergeArray[];
 	Integer insertionArray[];
 	Random rand;
-
+// Here the array is set to a size of 10
 	public ArrayGen(Integer number)
 	{
 		this.number = number;
 		rand = new Random();
-		randomArray = new Integer [number];
-		bubbleArray = new Integer[number];
-		quickArray = new Integer[number];
-		radixArray = new Integer[number];
-		mergeArray = new Integer[number];
-		insertionArray = new Integer[number];
+		randomArray = new Integer [10];
+		bubbleArray = new Integer[10];
+		quickArray = new Integer[10];
+		radixArray = new Integer[10];
+		mergeArray = new Integer[10];
+		insertionArray = new Integer[10];
 		arrayLoad();
 	}
 
@@ -32,12 +32,13 @@ public class ArrayGen {
 
 
 		// test print out the captured number in range 10,000 - 1,000,000
+	//If statement checks to see if the value is in the specified region
 	public void arrayLoad()
 	{
-	
+	if(number>=1000){
 		for (int i=0; i<randomArray.length; i++)
 		{
-			int num = rand.nextInt(10)+1;
+			int num = rand.nextInt(number)+1;
 			randomArray[i]=num;
 		}
 		for (int loader = 0; loader < randomArray.length; loader++)
@@ -48,7 +49,9 @@ public class ArrayGen {
 			radixArray[loader] = randomArray[loader];
 			insertionArray[loader] = randomArray[loader];
 		}
-		
+	}else{
+		System.out.println("Enter a higher number");
+	}
 	}
 	public Integer[] getMergeArray()
 	{
