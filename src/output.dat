@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD
-=======
+
 InsertionSort212024
 RadixSort854935
 QuickSort299797
@@ -12,5 +11,17 @@ RadixSort2747762
 QuickSort369332
 BubbleSort687938
 MergeSort1697332
->>>>>>> origin/Group
+
+
+InsertionSort339985
+RadixSort779186
+QuickSort282680
+BubbleSort69280
+MergeSort315609
+
+InsertionSort233071
+RadixSort681681
+QuickSort271560
+BubbleSort243763
+MergeSort304062
 
