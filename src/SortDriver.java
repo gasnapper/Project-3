@@ -29,6 +29,8 @@ public class SortDriver {
 	    mergeThread.run();//works
 	    
 	    
+		//insertThread.filePrint();
+		//mergeThread.filePrint();
 		
 		
 		

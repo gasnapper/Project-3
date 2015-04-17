@@ -96,9 +96,9 @@ public class QuickSort implements Runnable {
 		{
 			return passedTime;
 		}
-		public void filePrint() throws FileNotFoundException
+		public void filePrint() 
 		{
-			String output = "BubbleSort" + getTime();
+			String output = "QuickSort" + getTime();
 			File f = new File("src/output.dat");
 
 			FileWriter fw;
@@ -108,7 +108,7 @@ public class QuickSort implements Runnable {
 
 				bw.write(output);        // Writing to the file
 				bw.newLine();
-				//bw.flush();                       // Close the BufferedWriter
+				bw.close();                       // Close the BufferedWriter
 				fw.close();   // Close the FileWriter
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -127,15 +127,9 @@ public void run() {
 	t.stop();
 	long elapsedTime=System.nanoTime() - startTime;
 	setTime(elapsedTime);
-
-	try {
-		filePrint();
-	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+	filePrint();
+	
 	}
 
-	//filePrint();
 
-}
 	}//ends BubbleSort.java

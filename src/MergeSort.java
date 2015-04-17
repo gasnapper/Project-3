@@ -134,7 +134,7 @@ public class MergeSort implements Runnable{
 			BufferedWriter bw = new BufferedWriter(fw);
 
 			bw.write(output);        // Writing to the file
-			//bw.newLine();
+			bw.newLine();
 			//bw.flush();
 			bw.close();                       // Close the BufferedWriter
 

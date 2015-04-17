@@ -62,10 +62,10 @@ public void filePrint()
 	try {
 		fw = new FileWriter(f,true);
 		BufferedWriter bw = new BufferedWriter(fw);
-		//bw.newLine();
+	
 		bw.write(output);        // Writing to the file
-		
-		//bw.flush();                       // Close the BufferedWriter
+		bw.newLine();
+		bw.flush();                       // Close the BufferedWriter
 		bw.close();
 		fw.close();   // Close the FileWriter
 	} catch (IOException e) {
@@ -83,5 +83,6 @@ public void run() {
 	t.stop();
 	long elapsedTime=System.nanoTime() - startTime;
 	setTime(elapsedTime);
+	filePrint();
 }
 }
