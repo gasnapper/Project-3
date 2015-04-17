@@ -14,6 +14,8 @@ public class SortDriver {
 		ArrayGen a = new ArrayGen(number);
 		
 		
+		
+		
 		InsertionSort insertThread= new InsertionSort(a.getInsertionArray());
 		MergeSort mergeThread = new MergeSort(a.getMergeArray());
 		RadixSort radixThread=new RadixSort(a.getRadixArray());
