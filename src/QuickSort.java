@@ -12,6 +12,7 @@ public class QuickSort implements Runnable {
 	public QuickSort(Integer[] quickArray) {
 		// TODO Auto-generated constructor stub
 		data =quickArray;
+		 t = new Timer(0, null);
 	}
 
 	//-----------------------------------------------------------
@@ -109,12 +110,12 @@ public class QuickSort implements Runnable {
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	//t.start();
-	//long startTime= System.nanoTime();
+	t.start();
+	long startTime= System.nanoTime();
 	quickSort(data);
 	t.stop();
-	//long elapsedTime=System.nanoTime() - startTime;
-	//setTime(elapsedTime);
+	long elapsedTime=System.nanoTime() - startTime;
+	setTime(elapsedTime);
 	//filePrint();
 }
 	}//ends BubbleSort.java
