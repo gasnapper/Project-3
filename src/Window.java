@@ -12,12 +12,7 @@ public class Window {
 	private Integer number;
 	
 	public Window(){
-		height = 500;
-		width = 500;
-		frame = new JFrame();
-		frame.setSize(width, height);
-		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
+		
 		
 		
 		input = JOptionPane.showInputDialog(frame, "Enter a number from 1,000 to 1,000,000, no commas,:");
