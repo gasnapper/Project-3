@@ -2,9 +2,10 @@
 public class InsertionSort implements Runnable {
 
 	Thread t;
-	
+	Integer[] Data;
 	 public InsertionSort(Integer[] insertionArray) {
 		// TODO Auto-generated constructor stub
+		 Data=insertionArray;
 	}
 
 	public static <Integer extends Comparable<Integer>> 
@@ -25,37 +26,17 @@ public class InsertionSort implements Runnable {
       data[position] = key;
       
   }
-  System.out.print("After \n");
-  for(int z=0;z<data.length;z++)
-			
-		System.out.print( data[z] + " , ");
-		System.out.println();
+ 
 }
 	
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		Integer[]data ={464,666,96,165,5,2651,999,326};
 		
-		 System.out.print("before \n");
-		  for(int z=0;z<data.length;z++)
-					
-				System.out.print( data[z] + " , ");
-				System.out.println();
-		insertionSort(data);
+		insertionSort(Data);
 	
 	}
 
 	
-	public void begin(){
-		
-		System.out.println("Starting");
-		
-		if (t==null){
-			
-			t = new Thread(this);
-			t.start();
-		
-		}
-	}
+	
 }

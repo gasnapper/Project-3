@@ -3,8 +3,14 @@ import java.util.List;
 
 
 public class RadixSort implements Runnable {
+		Integer[] Data;
+	 public RadixSort(Integer[] radixArray) {
+		// TODO Auto-generated constructor stub
+		 
+		 Data=radixArray;
+	}
 
-	 public void radixsort(Integer[] input) {
+	public void radixsort(Integer[] input) {
 		  final int RADIX = 10;
 		  // declare and initialize bucket[]
 		  List<Integer>[] bucket = new ArrayList[RADIX];
@@ -36,23 +42,14 @@ public class RadixSort implements Runnable {
 		    // move to next digit
 		    placement *= RADIX;
 		  }
-		  System.out.print("After \n");
-		     for(int z=0;z<input.length;z++)
-					
-		   		System.out.print( input[z] + " , ");
-		   		System.out.println();
+		 
 		}
 
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		Integer[]data ={654,8,98,326,32,5,62,41,32,326,};
-		 System.out.print("before \n");
-	     for(int z=0;z<data.length;z++)
-				
-	   		System.out.print( data[z] + " , ");
-	   		System.out.println();
 		
-		radixsort(data);
+		
+		radixsort(Data);
 	}
 }
