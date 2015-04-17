@@ -28,13 +28,24 @@ public class InsertionSort implements Runnable {
   }
  
 }
-	
+	public void setTime(long elapsedTime)
+	{
+		  passedTime=elapsedTime;
+	}
+	public long getTime()
+	{
+		return passedTime;
+	}
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		
+		t.start();
+		long startTime= System.nanoTime();
 		insertionSort(Data);
-	
+		t.stop();
+		long elapsedTime=System.nanoTime() - startTime;
+		setTime(elapsedTime);	
 	}
 
 	

@@ -1,7 +1,11 @@
 import java.util.Arrays;
+
+import javax.swing.Timer;
 public class BubbleSort implements Runnable {
 	Integer[]data;
-public BubbleSort(Integer[] bubbleArray) {
+	Timer t;
+	long passedTime;
+	public BubbleSort(Integer[] bubbleArray) {
 		// TODO Auto-generated constructor stub
 	data= bubbleArray;
 	}
@@ -34,10 +38,22 @@ public static < Integer extends Comparable<Integer>>
 	        }
 //LISTEN HERE
     	}
-
+public void setTime(long elapsedTime)
+{
+	  passedTime=elapsedTime;
+}
+public long getTime()
+{
+	return passedTime;
+}
 @Override
 public void run() {
 	// TODO Auto-generated method stub
+	bubbleSort(data);t.start();
+	long startTime= System.nanoTime();
 	bubbleSort(data);
+	t.stop();
+	long elapsedTime=System.nanoTime() - startTime;
+	setTime(elapsedTime);
 }
 }

@@ -1,7 +1,11 @@
 import java.util.Arrays;
+
+import javax.swing.Timer;
 public class QuickSort implements Runnable {
 	Integer[]data;
-public QuickSort(Integer[] quickArray) {
+	Timer t;
+	long passedTime;
+	public QuickSort(Integer[] quickArray) {
 		// TODO Auto-generated constructor stub
 		data =quickArray;
 	}
@@ -73,7 +77,14 @@ public QuickSort(Integer[] quickArray) {
 //LISTEN HERE
 			return right;
 		}
-
+		public void setTime(long elapsedTime)
+		{
+			  passedTime=elapsedTime;
+		}
+		public long getTime()
+		{
+			return passedTime;
+		}
 @Override
 public void run() {
 	// TODO Auto-generated method stub

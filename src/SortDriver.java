@@ -28,6 +28,8 @@ public class SortDriver {
 	    mergeThread.run();
 		
 		
+		
+		
 		System.out.println("How many random numbers?: "+number);
 		System.out.println("How big is array?: "+ a.randomArrayLength());
 		System.out.println("What is in randomArray?: "+ a.getRandomArrayInt());
