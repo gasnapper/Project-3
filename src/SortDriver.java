@@ -16,7 +16,7 @@ public class SortDriver {
 		InsertionSort insertThread= new InsertionSort(a.getInsertionArray());
 		MergeSort mergeThread = new MergeSort(a.getMergeArray());
 		RadixSort radixThread=new RadixSort(a.getRadixArray());
-	//	BubbleSort bubbleThread= new BubbleSort(a.getBubbleArray());
+		BubbleSort bubbleThread= new BubbleSort(a.getBubbleArray());
 		QuickSort quickThread = new QuickSort(a.getQuickArray());
 		
 		
@@ -24,7 +24,7 @@ public class SortDriver {
 		insertThread.run();
 	    radixThread.run();
 	    quickThread.run();
-	 //   bubbleThread.run();
+	    bubbleThread.run();
 	    mergeThread.run();
 		
 		
@@ -39,8 +39,7 @@ public class SortDriver {
 				+"\n"+Arrays.toString(a.getInsertionArray()));
 		
 		System.out.println("How long did MergeSort take?: "+ mergeThread.getTime());
-		System.out.println("How long did RadixSort take?: "+ radixThread.getTime());
-		System.out.println("How long did InsertionSort take?: "+ insertThread.getTime());
+	
 		
 		
 
