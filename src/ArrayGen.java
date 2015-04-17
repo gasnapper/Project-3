@@ -34,6 +34,7 @@ public class ArrayGen {
 		// test print out the captured number in range 10,000 - 1,000,000
 	public void arrayLoad()
 	{
+	
 		for (int i=0; i<randomArray.length; i++)
 		{
 			int num = rand.nextInt(10)+1;
@@ -47,6 +48,7 @@ public class ArrayGen {
 			radixArray[loader] = randomArray[loader];
 			insertionArray[loader] = randomArray[loader];
 		}
+		
 	}
 	public Integer[] getMergeArray()
 	{

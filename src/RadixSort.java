@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.Timer;
+
 
 public class RadixSort implements Runnable {
 		Integer[] Data;
+		Timer t;
+		long passedTime;
 	 public RadixSort(Integer[] radixArray) {
 		// TODO Auto-generated constructor stub
-		 
+		 t = new Timer(0, null);
 		 Data=radixArray;
 	}
 
@@ -44,12 +48,29 @@ public class RadixSort implements Runnable {
 		  }
 		 
 		}
+	public void setTime(long elapsedTime)
+	{
+		  passedTime=elapsedTime;
+	}
+	public long getTime()
+	{
+		return passedTime;
+	}
+	public String filePrint()
+	{
+		String output = "MergeSort" + getTime();
+		return output;
+	}
 
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		
-		
+		t.start();
+		long startTime= System.nanoTime();
 		radixsort(Data);
+		t.stop();
+		long elapsedTime=System.nanoTime() - startTime;
+		setTime(elapsedTime);
+		
 	}
 }
