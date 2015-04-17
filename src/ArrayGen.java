@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 
@@ -70,5 +71,11 @@ public class ArrayGen {
 	public int randomArrayLength()
 	{
 		return randomArray.length;
+	}
+	// this doesnt work
+	public String getRandomArrayInt()
+	{
+		String array = Arrays.toString(randomArray);
+		return array;
 	}
 }

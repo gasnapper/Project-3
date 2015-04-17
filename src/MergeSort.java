@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MergeSort implements Runnable{
 	Integer[]data;
 	public MergeSort(Integer[] mergeArray)
@@ -91,12 +93,14 @@ public class MergeSort implements Runnable{
 		//  Copy merged data into original array
 		for (index = first; index <= last; index++)
 			data[index] = temp[index];
+		System.out.println("mergeArray After Sort"+ Arrays.toString(data));
    }
 
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("Started Merge Run Method");
+		//System.out.println("Started Merge Run Method");
+		//System.out.println("mergeArray Before Sort"+ Arrays.toString(data));
 		mergeSort(data);
 	}
 

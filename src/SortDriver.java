@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 
@@ -6,7 +7,7 @@ public class SortDriver {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			//System.out.println(randomArray[2]);
+			
 		Window w = new Window();
 		number = w.getNumber();
 		ArrayGen a = new ArrayGen(number);
@@ -20,16 +21,21 @@ public class SortDriver {
 		
 		
 		
-		//insertThread.run();
-	   // mergeThread.run();
-	    //radixThread.run();
-	   // quickThread.run();
-	   // bubbleThread.run();
+		insertThread.run();
+	    radixThread.run();
+	    quickThread.run();
+	    bubbleThread.run();
+	    mergeThread.run();
 		
 		
 		System.out.println("How many random numbers?: "+number);
-		System.out.println("How big is array?:"+ a.randomArrayLength());
-
+		System.out.println("How big is array?: "+ a.randomArrayLength());
+		System.out.println("What is in randomArray?: "+ a.getRandomArrayInt());
+		System.out.println("What array is potentially being passed? : "+
+				"\n"+Arrays.toString(a.getQuickArray())+"\n"+Arrays.toString(a.getBubbleArray())+
+				"\n"+Arrays.toString(a.getRadixArray())+"\n"+Arrays.toString(a.getMergeArray())
+				+"\n"+Arrays.toString(a.getInsertionArray()));
+		
 	
 		
 		
