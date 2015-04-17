@@ -1,3 +1,11 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.util.Arrays;
 
 import javax.swing.Timer;
@@ -7,10 +15,14 @@ public class MergeSort implements Runnable{
 	Integer[]data;
 	Timer t;
 	long passedTime;
+	
+	
 	public MergeSort(Integer[] mergeArray)
 	{
 		t = new Timer(0, null);
 		data= mergeArray;
+	
+
 	}
 /**
      * Sorts the specified array of objects using the merge sort
@@ -110,11 +122,33 @@ public class MergeSort implements Runnable{
 	{
 		return passedTime;
 	}
-	public String filePrint()
+	public void filePrint()
 	{
 		String output = "MergeSort" + getTime();
-		return output;
+		
+		File f = new File("src/output.dat");
+
+		FileWriter fw;
+		try {
+			fw = new FileWriter(f);
+			BufferedWriter bw = new BufferedWriter(fw);
+
+			bw.write(output);        // Writing to the file
+
+			bw.close();                       // Close the BufferedWriter
+
+			fw.close();   // Close the FileWriter
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		                    
 	}
+	
+
+		
+	
 	
 	@Override
 	public void run() {
@@ -127,6 +161,7 @@ public class MergeSort implements Runnable{
 		t.stop();
 		long elapsedTime=System.nanoTime() - startTime;
 		setTime(elapsedTime);
+		filePrint();
 	}
 
 

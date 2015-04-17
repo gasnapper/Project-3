@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 
 import javax.swing.Timer;
@@ -46,10 +50,31 @@ public long getTime()
 {
 	return passedTime;
 }
+public void filePrint()
+{
+	String output = "BubbleSort" + getTime();
+	File f = new File("src/output.dat");
+
+	FileWriter fw;
+	try {
+		fw = new FileWriter(f);
+		BufferedWriter bw = new BufferedWriter(fw);
+
+		bw.write(output);        // Writing to the file
+
+		bw.close();                       // Close the BufferedWriter
+
+		fw.close();   // Close the FileWriter
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	bubbleSort(data);t.start();
+	bubbleSort(data);
+	t.start();
 	long startTime= System.nanoTime();
 	bubbleSort(data);
 	t.stop();

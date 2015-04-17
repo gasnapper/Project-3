@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,23 +9,18 @@ import javax.swing.Timer;
 
 
 public class RadixSort implements Runnable {
-<<<<<<< HEAD
+
 		Integer[] Data;
 		Timer t;
 		long passedTime;
 	 public RadixSort(Integer[] radixArray) {
-		// TODO Auto-generated constructor stub
+		
+		 // TODO Auto-generated constructor stub
 		 t = new Timer(0, null);
 		 Data=radixArray;
-=======
-	Integer[]data;
-	Timer t;
-	long passedTime;
-	 public RadixSort(Integer[] radixArray) {
-		// TODO Auto-generated constructor stub
-		 
-		 data=radixArray;
->>>>>>> origin/Group
+
+	 
+
 	}
 
 	public void radixsort(Integer[] input) {
@@ -66,32 +65,39 @@ public class RadixSort implements Runnable {
 	{
 		return passedTime;
 	}
-<<<<<<< HEAD
-	public String filePrint()
+
+	public void filePrint()
 	{
-		String output = "MergeSort" + getTime();
-		return output;
+		String output = "RadixSort" + getTime();
+		File f = new File("src/output.dat");
+
+		FileWriter fw;
+		try {
+			fw = new FileWriter(f);
+			BufferedWriter bw = new BufferedWriter(fw);
+
+			bw.write(output);        // Writing to the file
+
+			bw.close();                       // Close the BufferedWriter
+
+			fw.close();   // Close the FileWriter
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-=======
->>>>>>> origin/Group
+
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		t.start();
 		long startTime= System.nanoTime();
-<<<<<<< HEAD
 		radixsort(Data);
-=======
-		radixSort(data);
->>>>>>> origin/Group
 		t.stop();
 		long elapsedTime=System.nanoTime() - startTime;
 		setTime(elapsedTime);
 		
-<<<<<<< HEAD
-=======
-		
->>>>>>> origin/Group
+
 	}
 }
