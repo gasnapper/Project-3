@@ -77,7 +77,7 @@ public class RadixSort implements Runnable {
 			BufferedWriter bw = new BufferedWriter(fw);
 
 			bw.write(output);        // Writing to the file
-
+			bw.newLine();
 			bw.close();                       // Close the BufferedWriter
 
 			fw.close();   // Close the FileWriter

@@ -12,6 +12,7 @@ public class BubbleSort implements Runnable {
 	public BubbleSort(Integer[] bubbleArray) {
 		// TODO Auto-generated constructor stub
 	data= bubbleArray;
+	t = new Timer(0, null);
 	}
 
 //-------------------------------------------------
@@ -61,10 +62,10 @@ public void filePrint()
 		BufferedWriter bw = new BufferedWriter(fw);
 
 		bw.write(output);        // Writing to the file
+		bw.newLine();
+		//bw.close();                       // Close the BufferedWriter
 
-		bw.close();                       // Close the BufferedWriter
-
-		fw.close();   // Close the FileWriter
+		//fw.close();   // Close the FileWriter
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

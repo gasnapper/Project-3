@@ -1,7 +1,10 @@
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Arrays;
 
 import javax.swing.Timer;
@@ -12,6 +15,7 @@ public class QuickSort implements Runnable {
 	public QuickSort(Integer[] quickArray) {
 		// TODO Auto-generated constructor stub
 		data =quickArray;
+		t = new Timer(0, null);
 	}
 
 	//-----------------------------------------------------------
@@ -89,32 +93,40 @@ public class QuickSort implements Runnable {
 		{
 			return passedTime;
 		}
-		public void filePrint()
+		public void filePrint() throws FileNotFoundException
 		{
 			String output = "QuickSort" + getTime();
 			File f = new File("src/output.dat");
-
-			FileWriter fw;
-			try {
-				fw = new FileWriter(f);
-				BufferedWriter bw = new BufferedWriter(fw);
-				bw.write(output);        // Writing to the file
-				bw.close();                       // Close the BufferedWriter
-				fw.close();   // Close the FileWriter
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				FileOutputStream fos;
+				try {
+					fos = new FileOutputStream("src/output.dat",true);
+					ObjectOutputStream oos = new ObjectOutputStream(fos);
+					oos.writeObject(output);
+					oos.flush();
+					oos.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 		}
+			
+			
+		
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	//t.start();
-	//long startTime= System.nanoTime();
+	t.start();
+	long startTime= System.nanoTime();
 	quickSort(data);
 	t.stop();
-	//long elapsedTime=System.nanoTime() - startTime;
-	//setTime(elapsedTime);
-	//filePrint();
+	long elapsedTime=System.nanoTime() - startTime;
+	setTime(elapsedTime);
+	try {
+		filePrint();
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 	}//ends BubbleSort.java

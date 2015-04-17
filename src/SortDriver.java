@@ -23,7 +23,7 @@ public class SortDriver {
 		
 		insertThread.run();//works
 	    radixThread.run();//works
-	    //quickThread.run();////////broken
+	    quickThread.run();////////broken
 	    //bubbleThread.run();//////broken
 	    mergeThread.run();//works
 		
@@ -39,7 +39,7 @@ public class SortDriver {
 				+"\n"+Arrays.toString(a.getInsertionArray()));
 		
 		System.out.println("How long did MergeSort take?: "+ mergeThread.getTime());
-	
+		
 		
 		
 
