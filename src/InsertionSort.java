@@ -1,8 +1,11 @@
+import javax.swing.Timer;
+
 
 public class InsertionSort implements Runnable {
 
-	Thread t;
+	Timer t;
 	Integer[] Data;
+	long passedTime;
 	 public InsertionSort(Integer[] insertionArray) {
 		// TODO Auto-generated constructor stub
 		 Data=insertionArray;

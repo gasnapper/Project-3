@@ -1,13 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.Timer;
+
 
 public class RadixSort implements Runnable {
-		Integer[] Data;
+	Integer[]data;
+	Timer t;
+	long passedTime;
 	 public RadixSort(Integer[] radixArray) {
 		// TODO Auto-generated constructor stub
 		 
-		 Data=radixArray;
+		 data=radixArray;
 	}
 
 	public void radixsort(Integer[] input) {
@@ -44,12 +48,24 @@ public class RadixSort implements Runnable {
 		  }
 		 
 		}
-
+	public void setTime(long elapsedTime)
+	{
+		  passedTime=elapsedTime;
+	}
+	public long getTime()
+	{
+		return passedTime;
+	}
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
+		t.start();
+		long startTime= System.nanoTime();
+		radixSort(data);
+		t.stop();
+		long elapsedTime=System.nanoTime() - startTime;
+		setTime(elapsedTime);
 		
 		
-		radixsort(Data);
 	}
 }
