@@ -56,7 +56,7 @@ public class InsertionSort implements Runnable {
 			BufferedWriter bw = new BufferedWriter(fw);
 			//bw.newLine();
 			bw.write(output);        // Writing to the file
-			//bw.newLine();
+			bw.newLine();
 			//bw.flush();
 			//fw.flush();
 			bw.close();   // Close the BufferedWriter
@@ -79,6 +79,7 @@ public class InsertionSort implements Runnable {
 		long elapsedTime=System.nanoTime() - startTime;
 		setTime(elapsedTime);
 		filePrint();
+	
 	}
 
 	
