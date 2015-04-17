@@ -1,9 +1,15 @@
 import java.util.Arrays;
 
+import javax.swing.Timer;
+
+
 public class MergeSort implements Runnable{
 	Integer[]data;
+	Timer t;
+	long passedTime;
 	public MergeSort(Integer[] mergeArray)
 	{
+		t = new Timer(0, null);
 		data= mergeArray;
 	}
 /**
@@ -94,14 +100,32 @@ public class MergeSort implements Runnable{
 		for (index = first; index <= last; index++)
 			data[index] = temp[index];
 		//System.out.println("mergeArray After Sort"+ Arrays.toString(data));
+		
    }
-
+	public void setTime(long elapsedTime)
+	{
+		  passedTime=elapsedTime;
+	}
+	public long getTime()
+	{
+		return passedTime;
+	}
+	public String filePrint()
+	{
+		
+	}
+	
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		//System.out.println("Started Merge Run Method");
 		//System.out.println("mergeArray Before Sort"+ Arrays.toString(data));
+		t.start();
+		long startTime= System.nanoTime();
 		mergeSort(data);
+		t.stop();
+		long elapsedTime=System.nanoTime() - startTime;
+		setTime(elapsedTime);
 	}
 
 

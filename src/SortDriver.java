@@ -36,6 +36,7 @@ public class SortDriver {
 				"\n"+Arrays.toString(a.getRadixArray())+"\n"+Arrays.toString(a.getMergeArray())
 				+"\n"+Arrays.toString(a.getInsertionArray()));
 		
+		System.out.println("How long did MergeSort take?: "+ mergeThread.getTime());
 	
 		
 		
