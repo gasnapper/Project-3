@@ -1,3 +1,8 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import javax.swing.Timer;
 
 
@@ -40,6 +45,26 @@ public class InsertionSort implements Runnable {
 	{
 		return passedTime;
 	}
+	public void filePrint()
+	{
+		String output = "InsertionSort" + getTime();
+		File f = new File("src/output.dat");
+
+		FileWriter fw;
+		try {
+			fw = new FileWriter(f);
+			BufferedWriter bw = new BufferedWriter(fw);
+
+			bw.write(output);        // Writing to the file
+
+			bw.close();                       // Close the BufferedWriter
+
+			fw.close();   // Close the FileWriter
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
@@ -49,7 +74,8 @@ public class InsertionSort implements Runnable {
 		insertionSort(Data);
 		t.stop();
 		long elapsedTime=System.nanoTime() - startTime;
-		setTime(elapsedTime);	
+		setTime(elapsedTime);
+		filePrint();
 	}
 
 	

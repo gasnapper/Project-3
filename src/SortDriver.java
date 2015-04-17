@@ -21,11 +21,11 @@ public class SortDriver {
 		
 		
 		
-		insertThread.run();
-	    radixThread.run();
-	    quickThread.run();
-	    bubbleThread.run();
-	    mergeThread.run();
+		insertThread.run();//works
+	    radixThread.run();//works
+	    //quickThread.run();////////broken
+	    //bubbleThread.run();//////broken
+	    mergeThread.run();//works
 		
 		
 		
