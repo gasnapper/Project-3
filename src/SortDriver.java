@@ -15,7 +15,7 @@ public class SortDriver {
 		
 		InsertionSort insertThread= new InsertionSort(a.getInsertionArray());
 		MergeSort mergeThread = new MergeSort(a.getMergeArray());
-		RadixSort radixThread=new RadixSort();
+		RadixSort radixThread=new RadixSort(a.getRadixArray());
 		BubbleSort bubbleThread= new BubbleSort(a.getBubbleArray());
 		QuickSort quickThread = new QuickSort(a.getQuickArray());
 		
