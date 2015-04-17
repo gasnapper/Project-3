@@ -93,7 +93,7 @@ public class MergeSort implements Runnable{
 		//  Copy merged data into original array
 		for (index = first; index <= last; index++)
 			data[index] = temp[index];
-		System.out.println("mergeArray After Sort"+ Arrays.toString(data));
+		//System.out.println("mergeArray After Sort"+ Arrays.toString(data));
    }
 
 	@Override
