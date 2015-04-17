@@ -112,7 +112,8 @@ public class MergeSort implements Runnable{
 	}
 	public String filePrint()
 	{
-		
+		String output = "MergeSort" + getTime();
+		return output;
 	}
 	
 	@Override
